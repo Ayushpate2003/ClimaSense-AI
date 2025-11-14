@@ -37,6 +37,13 @@ export const MobileMenu = () => {
             <SidebarNavItem to="/forecast" icon="calendar" label="Forecast" onClick={() => setIsOpen(false)} />
             <SidebarNavItem to="/alerts" icon="bell" label="Alerts" onClick={() => setIsOpen(false)} />
             <SidebarNavItem to="/ai-insights" icon="sparkles" label="AI Insights" onClick={() => setIsOpen(false)} />
+
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <SidebarNavItem to="#add" icon="plus" label="Add" onClick={() => setIsOpen(false)} />
+              <SidebarNavItem to="#search" icon="search" label="Search" onClick={() => setIsOpen(false)} />
+              <SidebarNavItem to="#notifications" icon="bell" label="Notifications" onClick={() => setIsOpen(false)} />
+              <SidebarNavItem to="#profile" icon="user" label="Profile" onClick={() => setIsOpen(false)} />
+            </div>
           </nav>
         </div>
       </div>

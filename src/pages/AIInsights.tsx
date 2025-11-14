@@ -1,6 +1,5 @@
 import { WeatherBackground } from "@/components/WeatherBackground";
 import { Sidebar } from "@/components/Sidebar";
-import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { GlassCard } from "@/components/GlassCard";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -11,9 +10,8 @@ const AIInsights = () => {
     <WeatherBackground condition="cloudy">
       <Sidebar />
       <MobileMenu />
-      <div className="min-h-screen lg:ml-20">
-        <Header userName="AI Climate Insights" />
-        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+      <div className="min-h-screen lg:ml-48">
+        <main className="px-4 lg:px-8 h-screen">
           <ScrollArea className="h-full">
           <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 animate-fade-in">AI Insights</h1>
           <GlassCard className="p-6 lg:p-8 animate-fade-in">

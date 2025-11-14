@@ -1,6 +1,5 @@
 import { WeatherBackground } from "@/components/WeatherBackground";
 import { Sidebar } from "@/components/Sidebar";
-import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { GlassCard } from "@/components/GlassCard";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -11,9 +10,8 @@ const Index = () => {
     <WeatherBackground condition="sunny">
       <Sidebar />
       <MobileMenu />
-      <div className="min-h-screen lg:ml-20">
-        <Header userName="ClimaSense AI" />
-        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+      <div className="min-h-screen lg:ml-48">
+        <main className="px-4 lg:px-8 h-screen">
           <ScrollArea className="h-full">
             <div className="text-center mb-12 animate-fade-in">
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4">Welcome to ClimaSense AI</h1>

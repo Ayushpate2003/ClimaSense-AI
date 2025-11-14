@@ -1,6 +1,5 @@
 import { WeatherBackground } from "@/components/WeatherBackground";
 import { Sidebar } from "@/components/Sidebar";
-import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { LocationCard } from "@/components/LocationCard";
 import { AnimatedWeatherIcon } from "@/components/AnimatedWeatherIcon";
@@ -40,9 +39,8 @@ const Dashboard = () => {
       <WeatherBackground condition="cloudy">
         <Sidebar />
         <MobileMenu />
-        <Header userName="ClimaSense AI" />
 
-        <div className="lg:ml-24 pt-16 p-4 lg:p-8 h-[calc(100vh-4rem)] flex items-center justify-center">
+        <div className="lg:ml-48 p-4 lg:p-8 h-screen flex items-center justify-center">
           <div className="glass-dark rounded-3xl p-8 max-w-md text-center">
             <h2 className="text-2xl font-bold mb-4">Unable to Load Weather</h2>
             <p className="text-muted-foreground mb-6">{error}</p>
@@ -63,9 +61,8 @@ const Dashboard = () => {
       <WeatherBackground condition="cloudy">
         <Sidebar />
         <MobileMenu />
-        <Header userName="ClimaSense AI" />
 
-        <div className="lg:ml-24 pt-16 p-4 lg:p-8 h-[calc(100vh-4rem)]">
+        <div className="lg:ml-48 p-4 lg:p-8 h-screen">
           <ScrollArea className="h-full">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1600px] mx-auto pb-8">
             <div className="lg:col-span-2 space-y-12">
@@ -86,9 +83,8 @@ const Dashboard = () => {
     <WeatherBackground condition={condition}>
       <Sidebar />
       <MobileMenu />
-      <Header userName="ClimaSense AI" />
 
-      <div className="lg:ml-24 pt-16 p-4 lg:p-8 h-[calc(100vh-4rem)]">
+      <div className="lg:ml-48 p-4 lg:p-8 h-screen">
         <ScrollArea className="h-full">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1600px] mx-auto pb-8">
           {/* Main Weather Card */}

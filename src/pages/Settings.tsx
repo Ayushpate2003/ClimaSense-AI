@@ -1,6 +1,5 @@
 import { WeatherBackground } from "@/components/WeatherBackground";
 import { Sidebar } from "@/components/Sidebar";
-import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useSettings } from "@/hooks/useSettings";
@@ -58,8 +57,7 @@ const Settings = () => {
     <WeatherBackground condition="cloudy">
       <Sidebar />
       <MobileMenu />
-      <Header userName="Settings" />
-      <div className="lg:ml-20 pt-20 min-h-screen p-4 lg:p-8 h-[calc(100vh-4rem)]">
+      <div className="lg:ml-48 min-h-screen p-4 lg:p-8 h-screen">
         <ScrollArea className="h-full">
           <div className="max-w-4xl mx-auto space-y-6 animate-fade-in pb-8">
           <div className="glass-dark rounded-3xl p-6 lg:p-8">

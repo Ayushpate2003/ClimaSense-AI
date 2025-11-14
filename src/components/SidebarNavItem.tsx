@@ -1,15 +1,18 @@
 import { Link, useLocation } from "react-router-dom";
-import { 
-  LayoutDashboard, 
-  Wind, 
-  Calendar, 
-  Bell, 
-  Sparkles 
+import {
+  LayoutDashboard,
+  Wind,
+  Calendar,
+  Bell,
+  Sparkles,
+  Plus,
+  Search,
+  User
 } from "lucide-react";
 
 interface SidebarNavItemProps {
   to: string;
-  icon: "layout-dashboard" | "wind" | "calendar" | "bell" | "sparkles";
+  icon: "layout-dashboard" | "wind" | "calendar" | "bell" | "sparkles" | "plus" | "search" | "user";
   label: string;
   onClick?: () => void;
 }
@@ -20,6 +23,9 @@ const iconMap = {
   "calendar": Calendar,
   "bell": Bell,
   "sparkles": Sparkles,
+  "plus": Plus,
+  "search": Search,
+  "user": User,
 };
 
 export const SidebarNavItem = ({ to, icon, label, onClick }: SidebarNavItemProps) => {

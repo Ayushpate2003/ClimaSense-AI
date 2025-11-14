@@ -1,6 +1,5 @@
 import { WeatherBackground } from "@/components/WeatherBackground";
 import { Sidebar } from "@/components/Sidebar";
-import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { GlassCard } from "@/components/GlassCard";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -21,8 +20,7 @@ const Forecast = () => {
       <WeatherBackground condition="cloudy">
         <Sidebar />
         <MobileMenu />
-        <Header userName="Climate Forecast" />
-        <div className="lg:ml-20 pt-20 min-h-screen p-4 lg:p-8 flex items-center justify-center">
+        <div className="lg:ml-48 min-h-screen p-4 lg:p-8 flex items-center justify-center">
           <div className="glass-dark rounded-3xl p-8">
             <div className="animate-pulse">Loading forecast data...</div>
           </div>
@@ -49,10 +47,8 @@ const Forecast = () => {
     <WeatherBackground condition={condition}>
       <Sidebar />
       <MobileMenu />
-      <div className="min-h-screen lg:ml-20">
-        <Header userName="Climate Forecast" />
-        
-        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+      <div className="min-h-screen lg:ml-48">
+        <main className="px-4 lg:px-8 h-screen">
           <ScrollArea className="h-full">
           <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 animate-fade-in">7-Day Forecast</h1>
 

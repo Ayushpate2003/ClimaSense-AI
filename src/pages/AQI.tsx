@@ -1,6 +1,5 @@
 import { WeatherBackground } from "@/components/WeatherBackground";
 import { Sidebar } from "@/components/Sidebar";
-import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { AQIBadge } from "@/components/AQIBadge";
 import { GlassCard } from "@/components/GlassCard";
@@ -123,9 +122,8 @@ const AQI = () => {
     <WeatherBackground condition="cloudy">
       <Sidebar />
       <MobileMenu />
-      <div className="min-h-screen lg:ml-20">
-        <Header userName="Air Quality Index" />
-        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+      <div className="min-h-screen lg:ml-48">
+        <main className="px-4 lg:px-8 h-screen">
           <ScrollArea className="h-full">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
             <h1 className="text-3xl lg:text-4xl font-bold text-foreground animate-fade-in">Air Quality Index</h1>
