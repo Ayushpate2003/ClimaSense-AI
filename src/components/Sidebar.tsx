@@ -16,9 +16,9 @@ export const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="hidden lg:flex fixed left-0 top-0 h-screen w-48 glass-dark border-r border-white/10 flex-col py-6 z-50 backdrop-blur-xl">
+    <div className="hidden md:flex fixed left-0 top-0 h-screen w-48 glass-dark border-r border-white/10 flex-col py-6 z-50 backdrop-blur-xl">
       {/* Logo */}
-      <div className="mb-8 w-16 h-16 flex items-center justify-center">
+      <div className="mb-8 w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center mx-auto">
         <img src={climasenseLogo} alt="ClimaSense AI" className="w-full h-full object-contain" />
       </div>
 
@@ -124,3 +124,5 @@ export const Sidebar = () => {
     </div>
   );
 };
+
+export default Sidebar;
