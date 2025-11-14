@@ -1,19 +1,22 @@
-# TODO: Remove Top Navbar and Move Buttons to Sidebar
+# TODO: Add Interactive AQI Map to Air Quality Index Page
 
 ## Current Status
-- [x] Update Sidebar.tsx: Change width to w-48, add 4 new navigation items (Add, Search, Notifications, Profile) after existing nav items
-- [x] Update SidebarNavItem.tsx: Extend icon prop types and iconMap to include plus, search, bell, user icons
-- [x] Update MobileMenu.tsx: Add 4 new SidebarNavItem components for the action buttons after existing nav items
-- [x] Update Dashboard.tsx: Remove Header import/component, adjust margins/padding/heights
-- [x] Update Settings.tsx: Remove Header import/component, adjust margins/padding/heights
-- [x] Update Index.tsx: Remove Header import/component, adjust margins/padding/heights
-- [x] Update NotFound.tsx: Remove Header import/component, adjust margins/padding/heights
-- [x] Update Forecast.tsx: Remove Header import/component, adjust margins/padding/heights
-- [x] Update Alerts.tsx: Remove Header import/component, adjust margins/padding/heights
-- [x] Update AQI.tsx: Remove Header import/component, adjust margins/padding/heights
-- [x] Update AIInsights.tsx: Remove Header import/component, adjust margins/padding/heights
+- [x] Install Leaflet.js and React-Leaflet dependencies
+- [x] Create AQI service (src/services/aqiApi.ts) for OpenAQ API integration
+- [x] Create utility functions (src/lib/aqiUtils.ts) for AQI calculations and map helpers
+- [x] Create AQIMap component (src/components/AQIMap.tsx) with interactive map
+- [x] Integrate AQIMap into AQI page, replacing placeholder
+- [x] Start development server for testing
 
 ## Followup Steps
-- [x] Test responsive behavior (desktop: icon+text, mobile: icons only)
-- [x] Verify sidebar scrolling if needed
-- [x] Ensure layout integrity across all pages
+- [ ] Test map functionality and API integration
+- [ ] Verify responsive behavior on mobile devices
+- [ ] Ensure styling matches glassmorphism theme
+- [ ] Add error handling for API failures
+- [ ] Implement caching mechanism for API data
+- [ ] Test touch gestures on mobile
+- [ ] Verify AQI color coding accuracy
+- [ ] Check map performance with 50+ markers
+- [ ] Validate coordinate bounds calculation
+- [ ] Test refresh functionality
+- [ ] Ensure accessibility compliance

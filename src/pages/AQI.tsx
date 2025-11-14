@@ -6,6 +6,7 @@ import { GlassCard } from "@/components/GlassCard";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Wind, Factory, Car, Leaf, ShieldAlert } from "lucide-react";
 import { useWeather } from "@/hooks/useWeather";
+import AQIMap from "@/components/AQIMap";
 
 // Helper function to get pollutant status based on value and type
 const getPollutantStatus = (name: string, value: number): string => {
@@ -159,9 +160,7 @@ const AQI = () => {
                   )}
                 </div>
               </div>
-              <div className="w-full h-48 lg:h-64 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-6">
-                <p className="text-muted-foreground text-sm lg:text-base">Interactive AQI Map</p>
-              </div>
+              <AQIMap className="mb-6" />
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4">
                 {pollutants.map((pollutant) => {
                   // Determine color based on status
