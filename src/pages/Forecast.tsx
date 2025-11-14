@@ -3,6 +3,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { GlassCard } from "@/components/GlassCard";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Wind, Droplets } from "lucide-react";
 import { useWeather } from "@/hooks/useWeather";
 import { useSettings } from "@/hooks/useSettings";
@@ -51,7 +52,8 @@ const Forecast = () => {
       <div className="min-h-screen lg:ml-20">
         <Header userName="Climate Forecast" />
         
-        <main className="pt-24 px-4 lg:px-8 pb-8">
+        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+          <ScrollArea className="h-full">
           <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 animate-fade-in">7-Day Forecast</h1>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 lg:gap-4 mb-8 animate-fade-in">
@@ -158,6 +160,7 @@ const Forecast = () => {
               ))}
             </div>
           </GlassCard>
+          </ScrollArea>
         </main>
       </div>
     </WeatherBackground>

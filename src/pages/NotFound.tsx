@@ -1,5 +1,11 @@
+import { WeatherBackground } from "@/components/WeatherBackground";
+import { Sidebar } from "@/components/Sidebar";
+import { Header } from "@/components/Header";
+import { MobileMenu } from "@/components/MobileMenu";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { CloudOff, Home } from "lucide-react";
 
 const NotFound = () => {
   const location = useLocation();
@@ -9,15 +15,31 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
+    <WeatherBackground condition="cloudy">
+      <Sidebar />
+      <MobileMenu />
+      <div className="min-h-screen lg:ml-20">
+        <Header userName="Page Not Found" />
+        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+          <ScrollArea className="h-full">
+            <div className="flex items-center justify-center min-h-full">
+              <div className="text-center glass-dark rounded-3xl p-12 max-w-md animate-fade-in">
+                <CloudOff className="h-24 w-24 text-muted-foreground mx-auto mb-6" />
+                <h1 className="mb-4 text-6xl font-bold text-foreground">404</h1>
+                <p className="mb-6 text-xl text-muted-foreground">Oops! The page you're looking for doesn't exist.</p>
+                <a
+                  href="/"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary rounded-full hover:bg-primary/80 transition-all duration-300 font-semibold"
+                >
+                  <Home className="h-5 w-5" />
+                  Return to Home
+                </a>
+              </div>
+            </div>
+          </ScrollArea>
+        </main>
       </div>
-    </div>
+    </WeatherBackground>
   );
 };
 

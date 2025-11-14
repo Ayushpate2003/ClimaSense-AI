@@ -11,7 +11,8 @@ import { SunriseSunsetCard } from "@/components/SunriseSunsetCard";
 import { AirQualityBreakdown } from "@/components/AirQualityBreakdown";
 import { HealthRecommendation } from "@/components/HealthRecommendation";
 import { LoadingSkeleton } from "@/components/LoadingSkeleton";
-import { Droplets, Wind, MapPin, Eye, Thermometer, Gauge, Cloud } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Droplets, Wind, MapPin, Eye, Thermometer, Gauge, Cloud, ChevronUp } from "lucide-react";
 import { useWeather } from "@/hooks/useWeather";
 import { useSettings } from "@/hooks/useSettings";
 import { getWeatherCondition } from "@/services/weatherApi";
@@ -41,7 +42,7 @@ const Dashboard = () => {
         <MobileMenu />
         <Header userName="ClimaSense AI" />
 
-        <div className="lg:ml-24 pt-20 min-h-screen p-4 lg:p-8 flex items-center justify-center">
+        <div className="lg:ml-24 pt-16 p-4 lg:p-8 h-[calc(100vh-4rem)] flex items-center justify-center">
           <div className="glass-dark rounded-3xl p-8 max-w-md text-center">
             <h2 className="text-2xl font-bold mb-4">Unable to Load Weather</h2>
             <p className="text-muted-foreground mb-6">{error}</p>
@@ -64,8 +65,9 @@ const Dashboard = () => {
         <MobileMenu />
         <Header userName="ClimaSense AI" />
 
-        <div className="lg:ml-24 pt-20 min-h-screen p-4 lg:p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1600px] mx-auto">
+        <div className="lg:ml-24 pt-16 p-4 lg:p-8 h-[calc(100vh-4rem)]">
+          <ScrollArea className="h-full">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1600px] mx-auto pb-8">
             <div className="lg:col-span-2 space-y-12">
               <LoadingSkeleton type="weather" />
             </div>
@@ -73,7 +75,8 @@ const Dashboard = () => {
               <h3 className="text-xl font-semibold px-2">Favorite Locations</h3>
               <LoadingSkeleton type="sidebar" />
             </div>
-          </div>
+            </div>
+          </ScrollArea>
         </div>
       </WeatherBackground>
     );
@@ -85,8 +88,9 @@ const Dashboard = () => {
       <MobileMenu />
       <Header userName="ClimaSense AI" />
 
-      <div className="lg:ml-24 pt-20 min-h-screen p-4 lg:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1600px] mx-auto">
+      <div className="lg:ml-24 pt-16 p-4 lg:p-8 h-[calc(100vh-4rem)]">
+        <ScrollArea className="h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1600px] mx-auto pb-8">
           {/* Main Weather Card */}
           <div className="lg:col-span-2 space-y-12">
             {/* Primary Weather Info */}
@@ -231,7 +235,8 @@ const Dashboard = () => {
               />
             ))}
           </div>
-        </div>
+          </div>
+        </ScrollArea>
       </div>
     </WeatherBackground>
   );

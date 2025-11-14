@@ -6,7 +6,7 @@ interface HeaderProps {
 
 export const Header = ({ userName = "User" }: HeaderProps) => {
   return (
-    <div className="fixed top-0 left-0 right-0 h-18 glass-dark border-b border-white/10 flex items-center justify-between px-4 lg:px-8 z-50">
+    <div className="fixed top-0 left-0 right-0 h-16 glass-dark border-b border-white/10 flex items-center justify-between px-4 lg:px-8 z-50">
       {/* Welcome Section */}
       <div className="ml-0 lg:ml-0">
         <p className="text-sm text-muted-foreground hidden sm:block">Welcome</p>

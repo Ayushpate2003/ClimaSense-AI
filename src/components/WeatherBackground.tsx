@@ -30,7 +30,7 @@ export const WeatherBackground = ({ condition = "default", children }: WeatherBa
   }, [bgImage]);
 
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden -z-10">
+    <div className="fixed inset-0 w-full h-full -z-10">
       {/* Background Image with Cover */}
       <div
         className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
@@ -60,7 +60,7 @@ export const WeatherBackground = ({ condition = "default", children }: WeatherBa
       {condition === 'cloudy' && <WeatherParticles type="clouds" intensity={8} />}
 
       {/* Content Container - positioned above background */}
-      <div className="relative z-0 min-h-screen w-full">
+      <div className="relative z-0 w-full">
         {children}
       </div>
     </div>

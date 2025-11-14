@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { AQIBadge } from "@/components/AQIBadge";
 import { GlassCard } from "@/components/GlassCard";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Wind, Factory, Car, Leaf, ShieldAlert } from "lucide-react";
 import { useWeather } from "@/hooks/useWeather";
 
@@ -124,7 +125,8 @@ const AQI = () => {
       <MobileMenu />
       <div className="min-h-screen lg:ml-20">
         <Header userName="Air Quality Index" />
-        <main className="pt-24 px-4 lg:px-8 pb-8">
+        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+          <ScrollArea className="h-full">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
             <h1 className="text-3xl lg:text-4xl font-bold text-foreground animate-fade-in">Air Quality Index</h1>
             {hasApiData ? (
@@ -264,6 +266,7 @@ const AQI = () => {
               })}
             </div>
           </GlassCard>
+          </ScrollArea>
         </main>
       </div>
     </WeatherBackground>

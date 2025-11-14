@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 import { Cloud, Droplets, Wind, Sun } from "lucide-react";
 import climasenseLogo from "@/assets/climasense-logo-new.png";
@@ -20,7 +21,8 @@ const Landing = () => {
       
       {/* Content */}
       <div className="relative z-10 min-h-screen">
-        <div className="container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen text-center">
+        <ScrollArea className="h-screen">
+          <div className="container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen text-center">
           {/* Logo */}
           <div className="mb-12 animate-fade-in">
             <img 
@@ -80,7 +82,8 @@ const Landing = () => {
               <p className="text-sm font-medium text-white">7-Day Forecast</p>
             </div>
           </div>
-        </div>
+          </div>
+        </ScrollArea>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
 import { GlassCard } from "@/components/GlassCard";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { AlertTriangle, CloudRain, Wind, Bell, Zap, Droplets } from "lucide-react";
 import { format } from "date-fns";
 
@@ -95,7 +96,8 @@ const Alerts = () => {
       <MobileMenu />
       <div className="min-h-screen lg:ml-20">
         <Header userName="Climate Alerts" />
-        <main className="pt-24 px-4 lg:px-8 pb-8">
+        <main className="pt-24 px-4 lg:px-8 h-[calc(100vh-6rem)]">
+          <ScrollArea className="h-full">
           <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 animate-fade-in">Climate & AQI Alerts</h1>
           
           {hasAlerts ? (
@@ -143,6 +145,7 @@ const Alerts = () => {
               <p className="text-muted-foreground">You'll be notified when climate conditions require attention.</p>
             </GlassCard>
           )}
+          </ScrollArea>
         </main>
       </div>
     </WeatherBackground>

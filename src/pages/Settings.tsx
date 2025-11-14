@@ -2,6 +2,7 @@ import { WeatherBackground } from "@/components/WeatherBackground";
 import { Sidebar } from "@/components/Sidebar";
 import { Header } from "@/components/Header";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useSettings } from "@/hooks/useSettings";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,8 +59,9 @@ const Settings = () => {
       <Sidebar />
       <MobileMenu />
       <Header userName="Settings" />
-      <div className="lg:ml-20 pt-20 min-h-screen p-4 lg:p-8">
-        <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
+      <div className="lg:ml-20 pt-20 min-h-screen p-4 lg:p-8 h-[calc(100vh-4rem)]">
+        <ScrollArea className="h-full">
+          <div className="max-w-4xl mx-auto space-y-6 animate-fade-in pb-8">
           <div className="glass-dark rounded-3xl p-6 lg:p-8">
             <h2 className="text-2xl font-bold mb-2">API Configuration</h2>
             <p className="text-muted-foreground text-sm mb-6">
@@ -159,7 +161,8 @@ const Settings = () => {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+        </ScrollArea>
       </div>
     </WeatherBackground>
   );
