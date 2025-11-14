@@ -11,7 +11,7 @@ const AIInsights = () => {
       <Sidebar />
       <MobileMenu />
       <div className="min-h-screen lg:ml-48">
-        <main className="px-4 lg:px-8 h-screen">
+        <main className="p-4 lg:p-8 h-screen">
           <ScrollArea className="h-full">
           <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 animate-fade-in">AI Insights</h1>
           <GlassCard className="p-6 lg:p-8 animate-fade-in">

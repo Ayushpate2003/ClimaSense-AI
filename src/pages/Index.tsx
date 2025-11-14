@@ -11,7 +11,7 @@ const Index = () => {
       <Sidebar />
       <MobileMenu />
       <div className="min-h-screen lg:ml-48">
-        <main className="px-4 lg:px-8 h-screen">
+        <main className="p-4 lg:p-8 h-screen">
           <ScrollArea className="h-full">
             <div className="text-center mb-12 animate-fade-in">
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4">Welcome to ClimaSense AI</h1>

@@ -18,7 +18,7 @@ const NotFound = () => {
       <Sidebar />
       <MobileMenu />
       <div className="min-h-screen lg:ml-48">
-        <main className="px-4 lg:px-8 h-screen">
+        <main className="p-4 lg:p-8 h-screen">
           <ScrollArea className="h-full">
             <div className="flex items-center justify-center min-h-full">
               <div className="text-center glass-dark rounded-3xl p-12 max-w-md animate-fade-in">

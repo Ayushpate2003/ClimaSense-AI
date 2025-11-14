@@ -110,8 +110,7 @@ const AQI = () => {
       <WeatherBackground condition="cloudy">
         <Sidebar />
         <MobileMenu />
-        <Header userName="Air Quality Index" />
-        <div className="lg:ml-20 pt-20 min-h-screen p-4 lg:p-8 flex items-center justify-center">
+        <div className="lg:ml-48 min-h-screen p-4 lg:p-8 flex items-center justify-center">
           <div className="glass-dark rounded-3xl p-8"><div className="animate-pulse">Loading AQI data...</div></div>
         </div>
       </WeatherBackground>
@@ -123,7 +122,7 @@ const AQI = () => {
       <Sidebar />
       <MobileMenu />
       <div className="min-h-screen lg:ml-48">
-        <main className="px-4 lg:px-8 h-screen">
+        <main className="p-4 lg:p-8 h-screen">
           <ScrollArea className="h-full">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
             <h1 className="text-3xl lg:text-4xl font-bold text-foreground animate-fade-in">Air Quality Index</h1>
